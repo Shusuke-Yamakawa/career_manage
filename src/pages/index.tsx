@@ -22,7 +22,7 @@ const items = [
   },
   {
     item: 'その他技術',
-    content: 'MySQL/Postgres/Oracle/AWS/GCP/Firebase/Sentry/GitHub Actions/Notion',
+    content: 'MySQL/Postgres/Oracle/AWS/GCP/Firebase/Sentry/GitHub Actions/Docker/Notion',
     style: grayRow,
   },
   {
@@ -42,9 +42,9 @@ const items = [
   },
 ];
 
-const Index = () => {
+const Profile = () => {
   return (
-    <Layout title={'home'}>
+    <Layout title={'profile'}>
       <div className='bg-white shadow overflow-hidden sm:rounded-lg'>
         <h2 className='px-1 py-5 sm:px-6 text-3xl'>プロフィール</h2>
         <div className='border-t'>
@@ -64,4 +64,4 @@ const Index = () => {
   );
 };
 
-export default Index;
+export default Profile;
