@@ -9,10 +9,12 @@ type Props = { carrerData: Pick<Carrer, 'id' | 'contentHtml'> };
 const CarrerDetail: NextPage<Props> = ({ carrerData }) => {
   return (
     <Layout title={'carrer'}>
-      <div
-        className='prose my-12 mx-auto px-2 max-w-2xl'
-        dangerouslySetInnerHTML={{ __html: carrerData.contentHtml }}
-      />
+      <article>
+        <div
+          className='prose my-12 mx-auto px-2 max-w-2xl'
+          dangerouslySetInnerHTML={{ __html: carrerData.contentHtml }}
+        />
+      </article>
     </Layout>
   );
 };

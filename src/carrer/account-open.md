@@ -1,9 +1,9 @@
 ---
-title: '市場系システム保守'
-term: '2019/11～2020/4'
-summary: '内製化の推進'
-description: 'ベンダー完全依存の開発から一部内製化できるよう礎を築いた。'
-skills: ['C++', 'Oracle12c']
+title: '口座開設WEB'
+term: '2018/4～2019/10'
+summary: '炎上プロジェクトの鎮火'
+description: '突然の離任(リーダー含む)や変更要望にPLとして対応した。'
+skills: ['Spring Boot', 'jQuery', 'Python(Selenium)', 'Oracle']
 ---
 
 ## プロダクト概要

@@ -26,7 +26,7 @@ const CarrerList: NextPage<Props> = (props) => {
                     <h2 className='text-2xl font-medium text-gray-900 title-font mb-2'>{summary}</h2>
                     <p className='leading-relaxed whitespace-pre-wrap'>{description}</p>
                     <Link href={`/carrer/${id}`}>
-                      <a className='text-indigo-500 inline-flex items-center mt-4'>
+                      <a className='text-indigo-500 inline-flex items-center mt-4 hover:text-blue-400'>
                         Detail
                         <svg
                           className='w-4 h-4 ml-2'
