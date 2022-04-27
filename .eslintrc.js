@@ -11,10 +11,11 @@ module.exports = {
     'next',
     'next/core-web-vitals',
     'prettier',
+    'plugin:tailwindcss/recommended',
   ],
   parser: '@typescript-eslint/parser',
   parserOptions: { project: './tsconfig.json' },
-  plugins: ['simple-import-sort'], // https://sunday-morning.app/posts/2020-10-31-eslint-import-auto-sort
+  plugins: ['simple-import-sort', 'tailwindcss'], // https://sunday-morning.app/posts/2020-10-31-eslint-import-auto-sort
   rules: {
     'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'no-restricted-syntax': ['error', { selector: 'TSEnumDeclaration', message: "Don't declare enums" }], // enumを禁止にする

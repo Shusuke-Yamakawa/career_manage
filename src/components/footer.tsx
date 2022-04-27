@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 export const Footer: FC = () => {
   return (
-    <footer className='mt-auto w-full h-12 flex justify-center items-center border-t'>
+    <footer className='flex justify-center items-center mt-auto w-full h-12 border-t'>
       <a
         className='flex items-center'
         href='https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app'

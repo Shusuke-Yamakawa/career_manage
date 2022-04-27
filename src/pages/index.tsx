@@ -45,15 +45,15 @@ const items = [
 const Profile = () => {
   return (
     <Layout title={'profile'}>
-      <div className='bg-white shadow overflow-hidden sm:rounded-lg'>
-        <h2 className='px-1 py-5 sm:px-6 text-3xl'>プロフィール</h2>
+      <div className='overflow-hidden bg-white shadow sm:rounded-lg'>
+        <h2 className='py-5 px-1 text-3xl sm:px-6'>プロフィール</h2>
         <div className='border-t'>
           <dl>
             {items.map(({ item, content, style }) => {
               return (
                 <div key={item} className={style}>
                   <dt className='text-sm font-medium text-gray-500'>{item}</dt>
-                  <dd className='mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2'>{content}</dd>
+                  <dd className='mt-1 text-sm text-gray-900 sm:col-span-2 sm:mt-0'>{content}</dd>
                 </div>
               );
             })}

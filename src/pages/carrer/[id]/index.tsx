@@ -11,7 +11,7 @@ const CarrerDetail: NextPage<Props> = ({ carrerData }) => {
     <Layout title={'carrer'}>
       <article>
         <div
-          className='prose my-12 mx-auto px-2 max-w-2xl'
+          className='px-2 my-12 mx-auto max-w-2xl prose'
           dangerouslySetInnerHTML={{ __html: carrerData.contentHtml }}
         />
       </article>
