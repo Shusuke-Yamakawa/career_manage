@@ -4,7 +4,7 @@ term: '2021/7～'
 summary: 'Next.jsを活用してリアーキ'
 description: 'Java/JSPで構成されていたシステムをNext.jsを活用してフロントを分離。/n主にフロント側の開発を担当する。'
 skills:
-  ['React 18', 'Next.js 12', 'React Query', 'Jotai', 'Storybook', 'Testing Library', 'Msw', Tailwind Css', 'Mantine']
+  ['React 18', 'Next.js 12', 'React Query', 'Jotai', 'Storybook', 'Testing Library', 'Msw', 'Tailwind Css', 'Mantine']
 ---
 
 ## プロダクト概要
