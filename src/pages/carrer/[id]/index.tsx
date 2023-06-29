@@ -17,7 +17,7 @@ const CarrerDetail: NextPage<Props> = (props) => {
 };
 
 export const getStaticPaths: GetStaticPaths<{ id: string }> = async () => {
-  const data = await client.getList({ endpoint: 'resumes-me' });
+  const data = await client.getList({ endpoint: 'resumes-me', queries: { limit: 100 } });
   const ids = data.contents.map((content) => `/carrer/${content.id}`);
   return {
     paths: ids,
@@ -31,6 +31,7 @@ export const getStaticProps: GetStaticProps<Props, { id: string }> = async ({ pa
       notFound: true,
     };
   }
+
   const data = await client.getListDetail({ endpoint: 'resumes-me', contentId: params.id });
 
   return {
