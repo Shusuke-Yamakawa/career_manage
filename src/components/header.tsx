@@ -14,8 +14,8 @@ export const Header: FC = () => {
           <div className='space-x-4'>
             {items.map(({ href, label }) => {
               return (
-                <Link key={href} href={href}>
-                  <a className='py-2 px-3 text-gray-300 hover:bg-gray-700 rounded'>{label}</a>
+                <Link className='py-2 px-3 text-gray-300 hover:bg-gray-700 rounded' key={href} href={href}>
+                  {label}
                 </Link>
               );
             })}

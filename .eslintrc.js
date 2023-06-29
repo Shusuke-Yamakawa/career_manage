@@ -17,12 +17,10 @@ module.exports = {
   parserOptions: { project: './tsconfig.json' },
   plugins: ['simple-import-sort', 'tailwindcss'], // https://sunday-morning.app/posts/2020-10-31-eslint-import-auto-sort
   rules: {
-    'no-console': ['error', { allow: ['warn', 'info', 'error'] }],
     'no-restricted-syntax': ['error', { selector: 'TSEnumDeclaration', message: "Don't declare enums" }], // enumを禁止にする
     'prefer-arrow-callback': 'error', // callbackにアロー関数を強要する
     'prefer-const': 'error',
     'func-style': ['error', 'expression'], // function foo() ⇒ var foo = function()
-    'arrow-body-style': ['error', 'always'], // 関数は必ず中括弧を付ける
     'no-restricted-imports': ['error', { paths: [{ name: 'react', importNames: ['default'] }] }], // import React from 'react';を許容しない
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off', // import {ReactNode} from 'react';を許容。import React, {ReactNode} from 'react';
@@ -51,7 +49,6 @@ module.exports = {
     '@typescript-eslint/naming-convention': [
       'error',
       { selector: ['typeAlias', 'typeParameter'], format: ['PascalCase'] },
-      { selector: ['property', 'method'], format: ['camelCase'] },
       {
         selector: 'variable',
         types: ['boolean'],
