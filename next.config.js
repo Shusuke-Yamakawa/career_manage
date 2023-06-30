@@ -4,6 +4,9 @@ const nextConfig = {
   eslint: {
     dirs: ['src/'],
   },
+  poweredByHeader: false,
+  experimental: { typedRoutes: true },
+  output: 'export',
 };
 
 module.exports = nextConfig;
