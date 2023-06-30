@@ -8,7 +8,7 @@ const ResumeDetail = async ({ params }: { params: { id: string } }) => {
       notFound: true,
     };
   }
-  const data: MicroCMSListResponse<ResumeData> = await client.getListDetail({
+  const data: ResumeData = await client.getListDetail({
     endpoint: 'resumes-me',
     contentId: params.id,
   });
@@ -21,7 +21,10 @@ const ResumeDetail = async ({ params }: { params: { id: string } }) => {
 };
 
 export const generateStaticParams = async () => {
-  const data = await client.getList({ endpoint: 'resumes-me', queries: { limit: 100 } });
+  const data: MicroCMSListResponse<ResumeData> = await client.getList({
+    endpoint: 'resumes-me',
+    queries: { limit: 100 },
+  });
   return data.contents.map((content) => ({ id: `/resume/${content.id}` }));
 };
 
