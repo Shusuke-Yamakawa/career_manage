@@ -1,10 +1,8 @@
 import type { MicroCMSListResponse } from 'microcms-js-sdk';
-import type { GetStaticProps, NextPage } from 'next';
 import Link from 'next/link';
-import Layout from 'src/components/layout';
 import { client } from 'src/lib/client';
 
-export type Resume = {
+export type ResumeData = {
   id: string;
   title: string;
   term: string;
@@ -14,16 +12,18 @@ export type Resume = {
   detail: any;
 };
 
-type Props = MicroCMSListResponse<Resume>;
-
-const CarrerList: NextPage<Props> = (props) => {
+const Resume = async () => {
+  const data: MicroCMSListResponse<ResumeData> = await client.get({
+    endpoint: 'resumes-me',
+    queries: { orders: '-startDate' },
+  });
   return (
-    <Layout title={'carrer'}>
+    <>
       <h2 className='py-3 px-1 text-3xl sm:px-6'>キャリア概要</h2>
       <section className='overflow-hidden text-gray-600'>
         <div className='container py-8 px-5 mx-auto'>
           <div className='-my-8 divide-y-2 divide-gray-100'>
-            {props.contents.map(({ id, title, term, summary, description, skills }) => {
+            {data.contents.map(({ id, title, term, summary, description, skills }) => {
               return (
                 <div key={term} className='flex flex-wrap py-8 md:flex-nowrap'>
                   <div className='flex flex-col shrink-0 mb-6 md:mb-0 md:w-64'>
@@ -40,7 +40,7 @@ const CarrerList: NextPage<Props> = (props) => {
                     />
                     <Link
                       className='inline-flex items-center mt-4 text-indigo-500 hover:text-blue-400'
-                      href={`/carrer/${id}`}
+                      href={`/resume/${id}`}
                       passHref
                     >
                       Detail
@@ -70,15 +70,8 @@ const CarrerList: NextPage<Props> = (props) => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };
 
-export const getStaticProps: GetStaticProps<Props> = async () => {
-  const data = await client.get({ endpoint: 'resumes-me', queries: { orders: '-startDate' } });
-  return {
-    props: data,
-  };
-};
-
-export default CarrerList;
+export default Resume;

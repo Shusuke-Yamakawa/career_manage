@@ -3,7 +3,7 @@ import type { FC } from 'react';
 
 const items = [
   { href: '/', label: 'Profile' },
-  { href: '/carrer', label: 'Carrer' },
+  { href: '/resume', label: 'Resume' },
 ];
 
 export const Header: FC = () => {
