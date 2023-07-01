@@ -25,7 +25,7 @@ export const generateStaticParams = async () => {
     endpoint: 'resumes-me',
     queries: { limit: 100 },
   });
-  return data.contents.map((content) => ({ id: `/resume/${content.id}` }));
+  return data.contents.map((content) => ({ id: content.id }));
 };
 
 export default ResumeDetail;
