@@ -15,7 +15,7 @@ const ResumeDetail = async ({ params }: { params: { id: string } }) => {
 
   return (
     <article>
-      <div className='px-2 my-12 mx-auto max-w-2xl prose' dangerouslySetInnerHTML={{ __html: data.detail }} />
+      <div className='prose mx-auto my-12 max-w-2xl px-2' dangerouslySetInnerHTML={{ __html: data.detail }} />
     </article>
   );
 };

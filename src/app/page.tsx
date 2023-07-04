@@ -13,7 +13,7 @@ const Profile = async () => {
   const data: MicroCMSListResponse<Profile> = await client.get({ endpoint: 'profile' });
   return (
     <div className='overflow-hidden bg-white shadow sm:rounded-lg'>
-      <h2 className='py-5 px-1 text-3xl sm:px-6'>プロフィール</h2>
+      <h2 className='px-1 py-5 text-3xl sm:px-6'>プロフィール</h2>
       <div className='border-t'>
         <dl>
           {data.contents.map(({ item, content }, index) => {
