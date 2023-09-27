@@ -11,7 +11,6 @@ export const metadata = {
     type: 'article',
     siteName: 'profile',
     images: 'http://www.bizreach.jp/img/logo/top-bizreach-ogp-img.png',
-    url: 'https://career-manage.vercel.app/',
   },
 };
 
