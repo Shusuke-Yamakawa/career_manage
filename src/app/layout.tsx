@@ -5,6 +5,7 @@ import { Header } from 'src/app/_components/header';
 
 export const metadata = {
   title: 'profile',
+  robots: 'noindex,nofollow',
   openGraph: {
     title: 'my profile',
     description: 'プロフィールと職務経歴',
