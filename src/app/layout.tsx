@@ -10,7 +10,6 @@ export const metadata = {
     description: 'プロフィールと職務経歴',
     type: 'article',
     siteName: 'profile',
-    images: 'http://www.bizreach.jp/img/logo/top-bizreach-ogp-img.png',
   },
 };
 
